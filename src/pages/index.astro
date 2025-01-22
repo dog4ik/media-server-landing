@@ -1,0 +1,102 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import Hero from '../components/Hero.astro'
+import Feature from '../components/Feature.astro'
+import Counter from '../components/Counter.astro'
+import ContentMedia from '../components/ContentMedia.astro'
+import { Accordion, AccordionItem } from 'accessible-astro-components'
+---
+
+<DefaultLayout title="Home">
+  <Hero />
+  <section class="my-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">Features</h2>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <Feature icon="mdi:download" title="BitTorrent client">
+          Use torrent client to download movies/shows you disire
+        </Feature>
+        <Feature icon="mdi:movie-filter" title="Intro detection">
+          Skip the annoying parts and jump right into the action
+        </Feature>
+        <Feature icon="mdi:play" title="UPnP"> Play your local content on any device </Feature>
+        <Feature icon="mdi:looks" title="Transcoding"> Transcode local videos in any format you want </Feature>
+        <Feature icon="mdi:cloud-off-outline" title="Offline">
+          You can access your content even without an internet connection
+        </Feature>
+        <Feature icon="mdi:search-web" title="Discovery"> Discover new trending content to download next </Feature>
+      </div>
+    </div>
+  </section>
+  <ContentMedia imgSrc="/desktop_app.png">
+    <h2>Desktop client</h2>
+    <p class="text-2xl">
+      If you are on Windows and want extended codecs support consider downloading
+      <a href="https://github.com/dog4ik/media-server-electron/releases">Desktop Client</a>
+      that will support more codecs.
+    </p>
+  </ContentMedia>
+  <ContentMedia imgSrc="/torrent_code.png" reverseImg={true}>
+    <h2>BitTorrent Client</h2>
+    <p class="text-2xl">
+      This media server has its own BitTorrent implementation that will allow fast content streaming in the future.
+    </p>
+  </ContentMedia>
+  <section class="my-64">
+    <div class="container grid grid-cols-1 gap-12 md:grid-cols-2">
+      <div class="flex flex-col items-start gap-4">
+        <h2 class="text-6xl">FAQ</h2>
+        <p class="text-2xl">You can find answers to common questions here</p>
+      </div>
+      <div class="space-content">
+        <Accordion>
+          <AccordionItem name="exclusive" title="Is downloading content illegal?">
+            <p>
+              No country explicitly deems piracy legal. However, some countries may have weak enforcement of copyright
+              laws or legal frameworks that do not effectively address piracy.
+            </p>
+          </AccordionItem>
+          <AccordionItem name="exclusive" title="How do I get started?">
+            <p>
+              After finishing installation process you should add movies and shows directories in the settings page and
+              press refresh library button. If these directories contained content, it will automatically appear in the
+              media server.
+            </p>
+          </AccordionItem>
+          <AccordionItem name="exclusive" title="What do I do when video/audio is not playable?">
+            <p>
+              Most videos you find are unlikely to play in browsers. You can either:
+              <ul>
+                <li>
+                  1. <i>Transcode</i> the video in playable format
+                </li>
+                <li>
+                  2. Download and use <a href="https://github.com/dog4ik/media-server-electron/releases"
+                    >Desktop Client</a
+                  > (Windows only)
+                </li>
+                <li>3. Open content using UPnP compatible media player like VLC or Kodi</li>
+              </ul>
+            </p>
+          </AccordionItem>
+          <AccordionItem name="exclusive" title="Is it safe to expose this server outside the local network?">
+            <p>
+              It is <b>VERY</b> unsafe! Media server currently does not have any authentication, and anyone who can access
+              it will have full control
+            </p>
+          </AccordionItem>
+        </Accordion>
+      </div>
+    </div>
+  </section>
+  <section class="mb-32 mt-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">Counters</h2>
+      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-3">
+        <Counter count="3" title="Stars" sub="On GitHub" />
+        <Counter count="300" title="Commits" sub="Merged" />
+        <Counter count="12+" title="Months" sub="Since launch" />
+      </div>
+    </div>
+  </section>
+</DefaultLayout>

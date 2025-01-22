@@ -1,0 +1,18 @@
+---
+import CallToAction from './CallToAction.astro'
+
+const currentYear = new Date().getFullYear()
+---
+
+<footer>
+  <CallToAction />
+  <section class="py-8">
+    <div class="container">
+      <p>
+        &copy; {currentYear} - The Media Server. Made with <a
+          href="https://github.com/withastro/astro">Astro</a
+        >.
+      </p>
+    </div>
+  </section>
+</footer>

@@ -1,0 +1,30 @@
+{
+  "name": "media-server-landing",
+  "description": "Media Server landing page",
+  "version": "0.1.0",
+  "author": "Vadim Gerasimov",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "@astrojs/mdx": "^4.0.3",
+    "@astrojs/partytown": "^2.1.3",
+    "@astrojs/tailwind": "^5.1.4",
+    "@iconify-json/ion": "^1.2.1",
+    "@iconify-json/mdi": "^1.2.1",
+    "astro": "^5.1.3",
+    "astro-compress": "^2.3.5",
+    "astro-icon": "^1.1.4",
+    "prettier": "^3.4.1",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-tailwindcss": "^0.6.9",
+    "sass": "^1.81.0",
+    "tailwindcss": "^3.4.15"
+  },
+  "dependencies": {
+    "accessible-astro-components": "^3.0.1"
+  }
+}
