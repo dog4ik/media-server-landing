@@ -28,7 +28,7 @@ import { Accordion, AccordionItem } from 'accessible-astro-components'
       </div>
     </div>
   </section>
-  <ContentMedia imgSrc="/desktop_app.png">
+  <ContentMedia width={800} height={500} imgSrc="/desktop_app.png" alt="Desktop app">
     <h2>Desktop client</h2>
     <p class="text-2xl">
       If you are on Windows and want extended codecs support consider downloading
@@ -36,7 +36,7 @@ import { Accordion, AccordionItem } from 'accessible-astro-components'
       that will support more codecs.
     </p>
   </ContentMedia>
-  <ContentMedia imgSrc="/torrent_code.png" reverseImg={true}>
+  <ContentMedia width={800} height={500} imgSrc="/torrent_code.png" reverseImg={true} alt="Torrent code">
     <h2>BitTorrent Client</h2>
     <p class="text-2xl">
       This media server has its own BitTorrent implementation that will allow fast content streaming in the future.
